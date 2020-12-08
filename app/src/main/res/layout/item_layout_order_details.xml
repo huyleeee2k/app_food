@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageViewOderDetails"
+        android:src="@drawable/background_user"
+        android:scaleType="centerCrop"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewNameRestaurantOderDetails"
+            android:textColor="#f12"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:text="@string/name_restaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/textViewNameFoodOderDetails"
+            android:textColor="#453E3F"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:text="@string/name_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewPriceOderDetails"
+                android:layout_marginTop="5dp"
+                android:layout_weight="7"
+                android:textColor="#217178"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:text="@string/price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <ImageButton
+                android:id="@+id/buttonAddOderDetails"
+                android:background="@drawable/custom_button_cart_order1"
+                android:layout_weight="3"
+                android:src="@drawable/ic_baseline_add_shopping_cart_24"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

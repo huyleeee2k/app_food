@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarOrderDetails"
+        android:background="@color/purple_200"
+        app:title="Order Details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:weightSum="12"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:src="@drawable/background_user"
+                android:id="@+id/image_orderDetails"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_marginStart="15dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:padding="5dp"
+                    android:id="@+id/textViewNameFoodOrderDetails"
+                    android:textColor="#F76D12"
+                    android:fontFamily="monospace"
+                    android:textSize="18sp"
+                    android:text="@string/name_food"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/textViewPriceOrderDetails"
+                    android:textColor="@color/black"
+                    android:padding="8dp"
+                    android:textSize="18sp"
+                    android:text="@string/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:id="@+id/buttonOrderDetails"
+                    android:background="@drawable/custom_button_cart_order"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_baseline_add_shopping_cart_24_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="7.5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"
+                android:textSize="20sp"
+                android:padding="7dp"
+                android:text="@string/other_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ListView
+                android:layout_margin="12dp"
+                android:id="@+id/listViewOtherFood"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1.5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonPayOrder"
+                android:textColor="@color/white"
+                android:text="@string/pay_order"
+                android:background="@drawable/custom_button_orderdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
+
+
+
+

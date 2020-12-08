@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.PaymentActivity">
+    
+    
+    <View
+        android:background="@drawable/custom_layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"/>
+    
+    <RelativeLayout
+        android:id="@+id/parentRelative"
+        android:background="@drawable/custom_layout_view1"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <TextView
+            android:id="@+id/textViewMoneyPaid"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/money_to_be_paid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/textViewTotalMoney"
+            android:textColor="@color/purple_700"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:text="@string/_0_usd"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/textViewMoneyPaid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:weightSum="11"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/textViewTotalMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/textViewPaymentInCash"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="@color/teal_700"
+                android:text="@string/payment_in_cash"
+                android:padding="10dp"
+                android:layout_weight="5.4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:drawableStartCompat="@drawable/ic_baseline_attach_money_24" />
+
+            <TextView
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/or"
+                android:background="@color/purple_200"
+                android:layout_weight="0.2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/textViewPaymentByCard"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="@color/black"
+                android:text="@string/payment_by_card"
+                android:padding="10dp"
+                android:layout_weight="5.4"
+                android:layout_width="0dp"
+                android:drawablePadding="5dp"
+                android:layout_height="wrap_content"
+                app:drawableStartCompat="@drawable/ic_baseline_credit_card_24" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editTextAddress"
+        android:padding="10dp"
+        android:background="@drawable/custom_edittext_address"
+        android:hint="@string/enter_your_address"
+        android:inputType="text"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/parentRelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/buttonGetYourAddress"
+        android:text="@string/get_your_address"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/editTextAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:visibility="invisible"
+        android:id="@+id/progress_bar_loading_address"
+        android:progressBackgroundTint="@color/purple_700"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/editTextAddress"
+        android:layout_toEndOf="@id/buttonGetYourAddress"
+        android:layout_width="25dp"
+        android:layout_height="25dp"/>
+
+    <TextView
+        android:id="@+id/textViewWarning"
+        android:textColor="#f12"
+        android:padding="3dp"
+        android:drawablePadding="7dp"
+        android:text="@string/please_turn_on_location_to_determine_your_location"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/buttonGetYourAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:drawableStartCompat="@drawable/ic_baseline_warning_24" />
+
+    <EditText
+        android:inputType="text"
+        android:maxHeight="200dp"
+        android:padding="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/enter_your_note"
+        android:background="@drawable/custom_edittext_note"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/textViewWarning"
+        android:id="@+id/editTextNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="no" />
+
+
+    <EditText
+        android:inputType="phone"
+        android:maxHeight="200dp"
+        android:padding="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/enter_your_number"
+        android:background="@drawable/custom_edittext_note"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/editTextNote"
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:theme="@android:style/DeviceDefault.ButtonBar"
+        android:background="@drawable/custom_button_payment"
+        android:id="@+id/buttonPayment"
+        android:text="@string/pay"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:background="@drawable/custom_button_payment"
+        android:id="@+id/buttonBackPayment"
+        android:text="@string/back"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        android:layout_below="@id/buttonPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

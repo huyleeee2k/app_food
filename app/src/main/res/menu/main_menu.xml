@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/action_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/action_setting"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="@string/setting" />
+
+        <item
+            android:id="@+id/action_mail"
+            android:icon="@drawable/ic_baseline_mail_outline_24"
+            android:title="@string/mail_response" />
+
+        <item
+            android:id="@+id/action_app"
+            android:icon="@drawable/ic_baseline_apps_24"
+            android:title="@string/application" />
+    </group>
+
+
+    <item android:title="@string/developers">
+
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/action_contact"
+                    android:icon="@drawable/ic_baseline_contact_phone_24"
+                    android:title="@string/contact" />
+
+                <item
+                    android:id="@+id/action_support"
+                    android:icon="@drawable/ic_baseline_support_24"
+                    android:title="@string/support" />
+
+                <item
+                    android:id="@+id/action_information"
+                    android:icon="@drawable/ic_baseline_info_24"
+                    android:title="@string/information" />
+            </group>
+        </menu>
+
+    </item>
+
+
+    <item android:title="@string/profile">
+
+        <menu>
+
+            <item
+                android:id="@+id/action_logout"
+                android:icon="@drawable/ic_baseline_exit_to_app_24"
+                android:title="@string/logout" />
+
+        </menu>
+
+    </item>
+
+</menu>
